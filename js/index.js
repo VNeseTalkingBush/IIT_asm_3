@@ -15,6 +15,7 @@ function scrollFunction() {
 
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
 	menu.style.display = 'block'
+  $('.small-img').addClass('fadeInLeft animated');
 	} else {
 	menu.style.display = 'none'
 	}
@@ -34,3 +35,5 @@ $(document).ready(function(){
 		$("#dp_menu").toggleClass("show");
 	});
 });
+
+// animate.css 
