@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Skynet</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
+
+    <!-- ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- scroll back to top button -->
+    <button
+      onclick="topFunction()"
+      id="myBtn"
+      title="Go to top"
+      class="scrollToTop"
+    >
+      <i class="fa fa-arrow-up"></i>
+    </button>
+
+    
+
+    <!-- header -->
+    <header class="header">
+      <!-- hidden menu -->
+        <div id="dp_menu" class="dp_menu" style="display:none">
+          <button id="btnMenu"><span>MENU</span></button>
+          <ul id="main-menu" class="main-menu" style="display:none">
+              <li class="nav-item dropdown">
+                  <a class="nav-link" href="#"> Home </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#tool">Tools</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    href="#projectDescription"
+                  >
+                    Project Description
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#skillAndJobs">Skills and Jobs</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#groupReflection">Group Reflection</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+          </ul>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#">
+            <img src="./image/logo.png" alt="" />
+          </a>
+          <button
+            style="color: #ffffff;"
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#"> Home </a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About Us</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="#tool">Tools</a>
+              </li>
+  
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#projectDescription"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  Project Description
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <a class="dropdown-item" href="#aim"
+                    >Aims</a
+                  >
+                  <a class="dropdown-item" href="#planAndProgress">Plans and Progress</a>
+                  <a class="dropdown-item" href="#role">Roles</a>
+                  <a class="dropdown-item" href="#scopeAndLimit"
+                    >Scope and Limits</a
+                  >
+                  <a class="dropdown-item" href="#toolAndTechnologies">Tools and Technologies</a>
+                  <a class="dropdown-item" href="#timeframe">Timeframe</a>
+                  <a class="dropdown-item" href="#risk"
+                    >Risks</a
+                  >
+                  <a class="dropdown-item" href="#communication">Group processes and Communications</a>
+                </div>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="#skillAndJobs">Skills and Jobs</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="#groupReflection">Group Reflection</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+     <!-- carousel -->
+    <section class="carousel"></section>
+    <section class="teamProfile"></section>
+    <section class="tool"></section>
+    <section class="projectDescription">
+</section>
+    <section class="skillAndJob"></section>
+    <section class="groupReflection"></section>
+    <footer></footer>  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
