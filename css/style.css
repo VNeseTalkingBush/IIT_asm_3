@@ -2,6 +2,11 @@ body{
     font-family: 'Play', sans-serif;
 }
 
+.container{
+  max-width: 80%;
+  margin: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -195,16 +200,57 @@ html {
 
 
 /* carousel */
+.carousel{
+  position: relative;
+}
 .carousel .background{
   width: 100%;
-  height: 45rem;
-  position: absolute;
+  height: 48rem;
 }
-.carousel .small-img{
-  position: relative;
-  border-radius: 10rem;
-  top: 20rem;
-  left: 5rem;
-  width: 40%;
+.carousel h1{
+  position: absolute;
+  top: 10rem;
+  background-image: linear-gradient(to bottom, rgb(255, 169, 130), rgb(255, 198, 172), rgb(255, 81, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 4rem;
+  font-weight: 700;
+  padding: 0 50rem 0 5rem;
+  text-align: center;
   opacity: 0;
+}
+
+.carousel h1 .Y{
+  background-image: linear-gradient(to bottom, rgb(255, 73, 73), rgb(255, 36, 36), rgb(255, 0, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation-name: flash;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite
+}
+.carousel .image .small-img{
+  width: 100%;
+  opacity: 0;
+}
+.carousel .image{
+  position: absolute;
+  top: 20rem;
+  animation-name: movement;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite
+}
+
+@keyframes movement {
+  0%, 100%{
+    transform: translate(0, 0);
+  }
+  50%{
+    transform: translate(0, -1rem);
+  }
 }

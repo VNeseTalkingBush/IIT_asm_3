@@ -2,6 +2,7 @@
 //Get the button:
 mybutton = document.getElementById("myBtn");
 menu = document.getElementById('dp_menu')
+img = document.getElementById('img')
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -13,9 +14,10 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {
 	menu.style.display = 'block'
-  $('.small-img').addClass('fadeInLeft animated');
+  $('.small-img').addClass(('fadeInLeft animated'))
+  $('.title').addClass(('fadeIn animated'))
 	} else {
 	menu.style.display = 'none'
 	}
