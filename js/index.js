@@ -18,9 +18,18 @@ function scrollFunction() {
 	menu.style.display = 'block'
   $('.small-img').addClass(('fadeInLeft animated'))
   $('.title').addClass(('fadeIn animated'))
-	} else {
-	menu.style.display = 'none'
 	}
+  else {
+    menu.style.display = 'none'
+    }
+
+  if (document.body.scrollTop > 1100 || document.documentElement.scrollTop > 1100){
+    $('.title-teamName').addClass('fadeIn animated')
+  }
+
+  if (document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1300){
+    $('.text-teamName').addClass('fadeIn animated')
+  }
 }
 
 // When the user clicks on the button, scroll to the top of the document

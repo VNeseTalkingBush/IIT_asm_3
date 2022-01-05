@@ -32,12 +32,37 @@ html {
   color: rgba(46, 0, 173, 0.5);
 }
 
+/* break */
+.break{
+  padding: 7rem 0;
+  text-align: center;
+  background-image: linear-gradient(to right, #69467eb6, #542375, #3c025e);
+}
+
+.break h1{
+  font-weight: 700;
+  text-align: center;
+  font-size: 7rem;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 3s linear infinite;
+  position: relative;
+}
+
 /* header */
 /* logo */
 .header .navbar .navbar-brand img {
-    width: 250px;
-    height: 50px;
+    width: 15rem;
+    height: 4rem;
     background-color: transparent;
+    margin-left: 2rem;
   }
   
   .header {
@@ -73,18 +98,6 @@ html {
   
   .header .navbar-nav .nav-item a:hover {
     color: rgb(255, 81, 0);
-  }
-  
-  .header .buyNow button {
-    background-color: transparent;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 600;
-    border: 1px solid #898583;
-    padding: 1rem 2.5rem;
-    border-radius: 10rem;
-    transition: border 0.3s;
-    transition: background-color 0.7s;
   }
   
   .header .navbar-nav .nav-item.dropdown .dropdown-menu {
@@ -246,11 +259,89 @@ html {
   animation-iteration-count: infinite
 }
 
+/* team profile */
+.teamProfile{
+  background-image: url(../image/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem;
+}
+.teamProfile .teamName{
+  text-align: center;
+}
+.teamProfile .teamName .title-teamName{
+  font-size: 7rem;
+  font-weight: 900;
+  background-image: linear-gradient(to right, rgb(102, 59, 39), rgb(255, 209, 188), rgb(202, 64, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 2rem;
+  opacity: 0;
+}
+
+.teamProfile .teamName .details .question{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamProfile .teamName .details .question h1{
+  width: 22ch;
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 700;
+  animation: typing 2s steps(22) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.teamProfile .teamName .details .question h1 span{
+  color: red;
+  opacity: 1;
+}
+
+
+.teamProfile .teamName .details p{
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 3rem;
+  opacity: 0;
+}
+
+
 @keyframes movement {
   0%, 100%{
     transform: translate(0, 0);
   }
   50%{
     transform: translate(0, -1rem);
+  }
+}
+
+@keyframes light {
+  0%, 100%{
+    color: #484848;
+  }
+  50%{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+               0 0 20px #fff, 
+               0 0 40px #fff;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
   }
 }
