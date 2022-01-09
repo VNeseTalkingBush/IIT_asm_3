@@ -30,6 +30,10 @@ function scrollFunction() {
   if (document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1300){
     $('.text-teamName').addClass('fadeIn animated')
   }
+
+  if (document.body.scrollTop > 1700 || document.documentElement.scrollTop > 1700){
+    $('.title-personalInformation').addClass('fadeIn animated')
+  }
 }
 
 // When the user clicks on the button, scroll to the top of the document
