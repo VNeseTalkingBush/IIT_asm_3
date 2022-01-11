@@ -4,12 +4,6 @@ from spotipy import Spotify
 class InvalidSearchError(Exception):
     pass
 
-client_id='a37ac3ed2dae412dbd0b22c553def56a'
-client_secret='c015cebd6f704b918b0c236028c252cb'
-device_name='VNESETALKINGBUS'
-redirect_uri='https://example.com/callback/'
-username='31kcfzjbjfcnfz6oekqo745gintm'
-scope='user-read-private user-read-playback-state user-modify-playback-state'
 
 def get_album_uri(spotify: Spotify, name: str) -> str:
 
@@ -63,5 +57,6 @@ def play_artist(spotify=None, device_id=None, uri=None):
 
 def play_track(spotify=None, device_id=None, uri=None):
     spotify.start_playback(device_id=device_id, uris=[uri])
-
+def pause_music(spotify = None,device_id = None):
+    spotify.pause_playback(device_id=device_id)
 
