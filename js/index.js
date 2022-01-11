@@ -34,6 +34,25 @@ function scrollFunction() {
   if (document.body.scrollTop > 1700 || document.documentElement.scrollTop > 1700){
     $('.title-personalInformation').addClass('fadeIn animated')
   }
+
+  if (document.body.scrollTop > 3500 || document.documentElement.scrollTop > 3500){
+    $('.title-projectDescription').addClass('fadeIn animated')
+  }
+
+  if (document.body.scrollTop > 3700 || document.documentElement.scrollTop > 3700){
+    $('.topic').addClass('fadeInLeft animated')
+    $('.topic-text').addClass('fadeInLeft animated')
+  }
+
+  if (document.body.scrollTop > 4500 || document.documentElement.scrollTop > 4500){
+    $('.motivation').addClass('fadeInRight animated')
+    $('.motivation-text').addClass('fadeInRight animated')
+  }
+
+  if (document.body.scrollTop > 4800 || document.documentElement.scrollTop > 4800){
+    $('.landscape').addClass('fadeInUp animated')
+    $('.landscape-text').addClass('fadeInUp animated')
+  }
 }
 
 // When the user clicks on the button, scroll to the top of the document
