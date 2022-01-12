@@ -91,7 +91,7 @@ while True:
             command = r.recognize_google(audio)
         except UnknownValueError:
             continue
-    print(command)
+    print('user: '+command)
 
     words = command.split()
     if len(words) <= 1:
@@ -104,12 +104,15 @@ while True:
         if words[0] == 'album':
             uri = get_album_uri(spotify=spotify, name=name)
             play_album(spotify=spotify, device_id=deviceID, uri=uri)
+            print('playing: ' + name)
         elif words[0] == 'artist':
             uri = get_artist_uri(spotify=spotify, name=name)
             play_artist(spotify=spotify, device_id=deviceID, uri=uri)
+            print('playing: ' + name)
         elif words[0] == 'play':
             uri = get_track_uri(spotify=spotify, name=name)
             play_track(spotify=spotify, device_id=deviceID, uri=uri)
+            print('playing: ' + name)
         elif words[0] == 'pause':
             pause_music(spotify=spotify, device_id=deviceID)
         else:

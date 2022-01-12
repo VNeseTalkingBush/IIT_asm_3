@@ -25,8 +25,8 @@ spotify = sp.Spotify(auth_manager=auth_manager)
 
 deviceID = 'e0fc382060bf171fb7b7326e458601861cf7b778'
 
-wikipedia.set_lang('en')
-language = 'en'
+# wikipedia.set_lang('en')
+# language = 'en'
 
 today = date.today()
 d2 = today.strftime("%B %d, %Y")
@@ -34,6 +34,58 @@ now = datetime.now()
 
 engine = pyttsx3.init()
 search = ''
+
+print('Jeff: How can I help you sir!!')
+def searching_youtube():
+    Jeff = 'What do you looking for?'
+
+    engine.say(Jeff)
+    print(Jeff)
+    engine.runAndWait()
+    Jeff_microphone = speech_recognition.Recognizer()
+    try:
+        with speech_recognition.Microphone() as mic:
+            audio = Jeff_microphone.record(mic, duration=3)
+            text = Jeff_microphone.recognize_google(audio)
+
+        Jeff = 'Okay master, searching for' + text.replace('searching for', '') + '\n'
+
+        engine.say(Jeff)
+        search = text.replace('searching for', '')
+        url = f"https://www.youtube.com/search?q={search}"
+        webbrowser.get().open(url)
+        print(Jeff)
+    except Exception as e:
+        print(e)
+
+
+def playing_youtube():
+    Jeff = 'What do you want to play?'
+    print(Jeff)
+    engine.say(Jeff)
+
+    engine.runAndWait()
+    Jeff_microphone = speech_recognition.Recognizer()
+    try:
+        with speech_recognition.Microphone() as mic:
+            audio = Jeff_microphone.record(mic, duration=3)
+            text = Jeff_microphone.recognize_google(audio)
+
+        Jeff = 'Okay master, playing for' + text.replace('playing for', '') + '\n'
+
+        engine.say(Jeff)
+        print(Jeff)
+        play = text.replace('playing for', '')
+        while True:
+            result = YoutubeSearch(play, max_results=10).to_dict()
+            if result:
+                break
+        url = f"https://www.youtube.com" + result[0]['url_suffix']
+        webbrowser.get().open(url)
+        print(result)
+
+    except Exception as e:
+        print(e)
 
 
 def spotify_music():
@@ -112,18 +164,22 @@ def spotify_music():
         if words[0] == 'album':
             uri = get_album_uri(spotify=spotify, name=name)
             play_album(spotify=spotify, device_id=deviceID, uri=uri)
-            engine.say('playing: ' + command)
+            engine.say('playing ' + name)
+            print('Jeff: playing ' + name)
         elif words[0] == 'artist':
             uri = get_artist_uri(spotify=spotify, name=name)
             play_artist(spotify=spotify, device_id=deviceID, uri=uri)
-            engine.say('playing: ' + command)
+            engine.say(' playing ' + name)
+            print('Jeff: playing ' + name)
         elif words[0] == 'play':
             uri = get_track_uri(spotify=spotify, name=name)
             play_track(spotify=spotify, device_id=deviceID, uri=uri)
-            engine.say('playing: ' + command)
+            engine.say('Jeff: playing ' + name)
+            print('Jeff: playing ' + name)
         elif words[0] == 'pause':
             pause_music(spotify=spotify, device_id=deviceID)
-            engine.say('playing: ' + command)
+            engine.say('Jeff: music paused')
+            print('music paused')
 
     except InvalidSearchError as e:
         print(e)
@@ -142,8 +198,11 @@ while True:
 
                 engine.say(Jeff)
             elif 'music' in text:
-                Jeff = 'What woud you like to hear'
+                Jeff = 'What would you like to hear'
+                print(Jeff)
                 engine.say(Jeff)
+                engine.runAndWait()
+
                 spotify_music()
 
 
@@ -152,17 +211,18 @@ while True:
                 Jeff = now.strftime("%H : %M minutes")
 
                 engine.say(Jeff)
-
+                print(Jeff)
             elif 'search for' in text:  # WIKIPEDIA
                 searching = text.replace('search for', '')
-                contents = wikipedia.summary(searching, sentences=3).split('\n')
-
+                contents = wikipedia.summary(searching, sentences=3)
+                print(contents)
                 engine.say(contents)
 
             elif 'video' in text:
                 Jeff = 'Do you want to search or play video?'
 
                 engine.say(Jeff)
+                print(Jeff)
 
                 engine.runAndWait()
                 Jeff_microphone = speech_recognition.Recognizer()
@@ -222,8 +282,9 @@ while True:
 
 
             elif 'bye' in text:  # TURN OFF
-                Jeff = 'Goodbye master\n'
+                Jeff = 'Goodbye sir\n'
                 engine.say(Jeff)
+                print(Jeff)
 
                 engine.runAndWait()
                 break
@@ -233,52 +294,3 @@ while True:
         print(e)
 
 
-    def searching_youtube():
-        Jeff = 'What do you looking for?'
-
-        engine.say(Jeff)
-
-        engine.runAndWait()
-        Jeff_microphone = speech_recognition.Recognizer()
-        try:
-            with speech_recognition.Microphone() as mic:
-                audio = Jeff_microphone.record(mic, duration=3)
-                text = Jeff_microphone.recognize_google(audio)
-
-            Jeff = 'Okay master, searching for' + text.replace('searching for', '') + '\n'
-
-            engine.say(Jeff)
-            search = text.replace('searching for', '')
-            url = f"https://www.youtube.com/search?q={search}"
-            webbrowser.get().open(url)
-        except Exception as e:
-            print(e)
-
-
-
-    def playing_youtube():
-        Jeff = 'What do you want to play?'
-
-        engine.say(Jeff)
-
-        engine.runAndWait()
-        Jeff_microphone = speech_recognition.Recognizer()
-        try:
-            with speech_recognition.Microphone() as mic:
-                audio = Jeff_microphone.record(mic, duration=3)
-                text = Jeff_microphone.recognize_google(audio)
-
-            Jeff = 'Okay master, playing for' + text.replace('playing for', '') + '\n'
-
-            engine.say(Jeff)
-            play = text.replace('playing for', '')
-            while True:
-                result = YoutubeSearch(play, max_results=10).to_dict()
-                if result:
-                    break
-            url = f"https://www.youtube.com" + result[0]['url_suffix']
-            webbrowser.get().open(url)
-            print(result)
-
-        except Exception as e:
-            print(e)
