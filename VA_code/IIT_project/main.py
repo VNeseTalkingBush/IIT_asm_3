@@ -154,7 +154,7 @@ def spotify_music():
             command = Jeff_microphone.recognize_google(audio)
         except UnknownValueError:
             print(UnknownValueError)
-    print(command)
+
 
     words = command.split()
 
@@ -192,6 +192,7 @@ while True:
         with speech_recognition.Microphone() as mic:
             audio = Jeff_microphone.record(mic, duration=3)
             text = Jeff_microphone.recognize_google(audio)
+            print('user: ' + text )
 
             if 'today' in text:  # DATE
                 Jeff = today.strftime("%B %d, %Y")

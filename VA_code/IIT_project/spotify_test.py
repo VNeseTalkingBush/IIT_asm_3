@@ -6,6 +6,9 @@ import spotipy as sp
 from spotipy.oauth2 import SpotifyOAuth
 
 
+laptop = '9b4a3abeee0b6b5e35ed744bbc6e7dccb4a71fa8'
+desktop =  'e0fc382060bf171fb7b7326e458601861cf7b778'
+selfphone = 'ac7d723f2c932725fcfb9e766f5c296d89d3037f'
 
 class InvalidSearchError(Exception):
     pass
@@ -65,7 +68,33 @@ def play_track(spotify=None, device_id=None, uri=None):
     spotify.start_playback(device_id=device_id, uris=[uri])
 def pause_music(spotify = None,device_id = None):
     spotify.pause_playback(device_id=device_id)
-
+def device_select():
+    r = speech_recognition.Recognizer()
+    print('where do you want to play')
+    while True:
+        with speech_recognition.Microphone() as mic:
+            r.adjust_for_ambient_noise(mic)
+            audio = r.record(mic, duration=3)
+            try:
+                command = r.recognize_google(audio)
+            except UnknownValueError:
+                continue
+        print('user: ' + command)
+        try:
+            if command == 'cell phone':
+                deviceID = selfphone
+                break
+            elif command == 'laptop':
+                break
+                deviceID = laptop
+            elif command == 'desktop':
+                deviceID = desktop
+                break
+        except Exception as e:
+            print('wrong device')
+            continue
+    return deviceID
+deviceID = device_select()
 
 
 # Connecting to the Spotify account
@@ -79,7 +108,9 @@ spotify = sp.Spotify(auth_manager=auth_manager)
 
 # Selecting device to play from
 
-deviceID = 'e0fc382060bf171fb7b7326e458601861cf7b778'
+
+
+
 
 # Voice command
 r = speech_recognition.Recognizer()
