@@ -1,20 +1,252 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Project Description</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="./css/animate.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/projectDescription.css" />
   </head>
   <body>
-      
+    <!-- scroll back to top button -->
+    <button
+      onclick="topFunction()"
+      id="myBtn"
+      title="Go to top"
+      class="scrollToTop"
+    >
+      <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- header -->
+    <header class="header">
+      <!-- hidden menu -->
+      <div id="dp_menu" class="dp_menu" style="display: none">
+        <button id="btnMenu"><span>MENU</span></button>
+        <ul id="main-menu" class="main-menu" style="display: none">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#"> Home </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#tool">Tools</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#projectDescription">
+              Project Description
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#skillAndJobs">Skills and Jobs</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#groupReflection">Group Reflection</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <img src="./image/logo.png" alt="" />
+        </a>
+        <button
+          style="color: #ffffff"
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#tool">Tools</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#projectDescription"
+                id="navbarDropdownMenuLink"
+                role="button"
+                aria-expanded="false"
+              >
+                Project Description
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" href="#aim">Aims</a>
+                <a class="dropdown-item" href="#planAndProgress"
+                  >Plans and Progress</a
+                >
+                <a class="dropdown-item" href="#role">Roles</a>
+                <a class="dropdown-item" href="#scopeAndLimit"
+                  >Scope and Limits</a
+                >
+                <a class="dropdown-item" href="#toolAndTechnologies"
+                  >Tools and Technologies</a
+                >
+                <a class="dropdown-item" href="#timeframe">Timeframe</a>
+                <a class="dropdown-item" href="#risk">Risks</a>
+                <a class="dropdown-item" href="#communication"
+                  >Group processes and Communications</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#skillAndJobs">Skills and Jobs</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#groupReflection">Group Reflection</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+     <!-- footer -->
+     <footer id="contact" class="footer">
+      <div class="container">
+        <header>
+          <h1>Let's step into the world of Information Technology!</h1>
+        </header>
+        <hr noshade="" />
+        <main>
+          <div class="row">
+            <div class="logo col-5">
+              <img src="./image/logo.png" alt="" />
+              <p>
+                Dec 16, 2021.
+                <span><a href="">Skynet</a><br /></span>INTRODUCTION TO IT
+                <br />
+                Assignment 3: IT Project
+              </p>
+            </div>
+            <div class="col-3 link">
+              <h3>Quick Link <i class="fa fa-link"></i></h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#ourTeam">Our Team</a></li>
+                <li><a href="#itWork">IT Works</a></li>
+                <li><a href="#itTechnologies">IT Technologies</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-4 contact">
+              <h3>Contact Us <i class="fa fa-envelope"></i></h3>
+              <p>
+                Email: <br />
+                Trinh Viet Quy:
+                <span
+                  ><a href="mailto: s3915202@rmit.edu.vn "
+                    >s3915202@rmit.edu.vn</a
+                  ></span
+                ><br />
+                Nguyen Thi Ha Giang:
+                <span
+                  ><a href="mailto: s3914108@rmit.edu.vn "
+                    >s3914108@rmit.edu.vn</a
+                  ></span
+                ><br />
+                Tran Khanh Duc:
+                <span
+                  ><a href="mailto: s3907087@rmit.edu.vn"
+                    >s3907087@rmit.edu.vn</a
+                  ></span
+                ><br />
+                Nguyen Tuan Thang:
+                <span
+                  ><a href="mailto: s3877039@rmit.edu.vn "
+                    >s3877039@rmit.edu.vn</a
+                  ></span
+                >
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
