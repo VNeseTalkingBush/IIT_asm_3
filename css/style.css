@@ -506,10 +506,6 @@ html {
 /* skillAndJobs */
 .skillAndJobs{
   background-image: url(../image/background.jpg);
-}
-
-.skillAndJobs{
-  background-image: url(../image/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5rem;
@@ -659,6 +655,59 @@ html {
 
 .skillAndJobs .list .item .content:hover figcaption{
   opacity: 0;
+}
+
+/* Group reflection */
+.groupReflection {
+  background-image: url(../image/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem;
+  text-align: center;
+}
+
+.groupReflection header{
+  text-align: center;
+}
+
+.groupReflection header h1{
+  font-size: 7rem;
+  font-weight: 900;
+  background-image: linear-gradient(to right, rgb(102, 59, 39), rgb(255, 209, 188), rgb(202, 64, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 2rem;
+  opacity: 1;
+}
+
+.groupReflection .container {
+  padding-bottom: 4rem;
+}
+
+.groupReflection .profile-navbar{
+  padding-top: 1rem;
+  background-color: #f3f3f3;
+  height: 12rem;
+  border-radius: 20px;
+}
+
+
+.groupReflection .profile-navbar .nav-link.active{
+  background-image: linear-gradient(to right, rgba(89, 67, 117, 0.952),
+    rgb(71, 24, 114),
+    rgb(47, 2, 73));
+}
+
+.groupReflection .details{
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  text-align: justify;
+  padding-left: 3rem;
+  background-color: rgba(0,0,0,0.3);
 }
 
 /* footer */
