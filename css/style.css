@@ -129,7 +129,7 @@ html {
       opacity: 1;
       top: 0;
       left: 0;
-      z-index: 10;
+      z-index: 50;
   }
 
   .dp_menu button {
@@ -488,12 +488,6 @@ html {
   padding: 1rem 2rem;
   margin-top: 3rem;
   border-radius: 10rem;
-  transition: border 0.3s;
-  transition: background-color 0.5s;
-}
-
-.projectDescription main button a{
-  text-decoration: none;
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
@@ -501,13 +495,170 @@ html {
   transition: all 0.5s;
 }
 
+
 .projectDescription main button:hover{
   border: 2px solid #fd4766;
   background-color: transparent;
+  color: #fd4766;
+  cursor: pointer;
 }
 
-.projectDescription main button:hover a{
-  color: #fd4766;
+/* skillAndJobs */
+.skillAndJobs{
+  background-image: url(../image/background.jpg);
+}
+
+.skillAndJobs{
+  background-image: url(../image/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem;
+  text-align: center;
+}
+
+.skillAndJobs header{
+  text-align: center;
+}
+
+.skillAndJobs header h1{
+  font-size: 7rem;
+  font-weight: 900;
+  background-image: linear-gradient(to right, rgb(102, 59, 39), rgb(255, 209, 188), rgb(202, 64, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 2rem;
+  opacity: 0;
+}
+
+.skillAndJobs .list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.skillAndJobs .list .item .content img{
+  width: 100%;
+  display: block;
+  transform: scale(1, 1);
+  transition: all 0.5s linear 0s;
+}
+
+.skillAndJobs .list .item .content:hover img{
+  transform: scale(1.5);
+}
+
+.skillAndJobs .list .item .content{
+  overflow: hidden;
+  position: relative;
+}
+
+.skillAndJobs .list .item.frontEnd{
+  grid-column: 1/span 2 ;
+  grid-row: 1/span 2 ;
+}
+
+.skillAndJobs .list .item.backEnd{
+  grid-column: 3/span 2;
+  grid-row: 1/span 2;
+}
+
+.skillAndJobs .list .item.database{
+  grid-column: 1/span 2;
+  grid-row: 3/span 2;
+}
+
+.skillAndJobs .list .item.ai{
+  grid-column: 3/span 2;
+  grid-row: 3/span 2;
+}
+
+.skillAndJobs .list .item .content figure{
+  margin: 0;
+}
+
+.skillAndJobs .list .item .content figure img{
+  position: relative;
+  height: 30rem;
+
+}
+
+.skillAndJobs .list .item .content figcaption{
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 20;
+  transition: all 0.3s;
+}
+
+.skillAndJobs .list .item .content figcaption p{
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 2rem;
+  letter-spacing: 2px;
+}
+
+.skillAndJobs .list .item .content figcaption h1{
+  color: rgb(255, 160, 239);
+  text-shadow: 0 0 10px rgb(0, 0, 0),
+               0 0 20px rgb(0, 0, 0), 
+               0 0 40px rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+.skillAndJobs .list .item .content{
+  position: relative;
+}
+
+.skillAndJobs .list .item .content .overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.skillAndJobs .list .item .content .details{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 10, 95, 0.3);
+  color: #ffffff;
+  letter-spacing: 1px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  z-index: 30;
+}
+
+.skillAndJobs .list .item .content .details ul, .skillAndJobs .list .item .content .details h5{
+  text-align: justify;
+}
+
+.skillAndJobs .list .item .content .details h4{
+  font-weight: 900;
+  text-shadow: 0 0 10px rgb(0, 0, 0),
+  0 0 20px rgb(0, 0, 0), 
+  0 0 40px rgb(0, 0, 0);
+}
+
+.skillAndJobs .list .item .content:hover .details{
+  opacity: 1;
+  visibility: visible;
+}
+
+.skillAndJobs .list .item .content:hover figcaption{
+  opacity: 0;
 }
 
 /* footer */

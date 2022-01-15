@@ -53,6 +53,15 @@ function scrollFunction() {
     $('.landscape').addClass('fadeInUp animated')
     $('.landscape-text').addClass('fadeInUp animated')
   }
+
+  if (document.body.scrollTop > 7000 || document.documentElement.scrollTop > 7000){
+    $('.title-skillAndJobs').addClass('fadeIn animated')
+  }
+
+  if (document.body.scrollTop > 7200 || document.documentElement.scrollTop > 7200){
+    $('.main-content').addClass('fadeIn animated')
+  }
+  
 }
 
 // When the user clicks on the button, scroll to the top of the document
