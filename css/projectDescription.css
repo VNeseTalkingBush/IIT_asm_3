@@ -215,7 +215,8 @@ html {
   .detailedDescription .container h1,
   .planAndProgress .container h1,
   .role .container h1,
-  .scopeAndLimit .container h1{
+  .scopeAndLimit .container h1,
+  .toolAndTechnology .container h1{
     text-align: center;
     font-weight: 900;
     font-size: 5rem;
@@ -407,6 +408,17 @@ text-align: justify;
 .scopeAndLimit .container h1{
   margin-bottom: 3rem;
 }
+.scopeAndLimit .container h3{
+  font-weight: 900;
+}
+
+.scopeAndLimit .container h5{
+  font-weight: 700;
+}
+
+.scopeAndLimit .container p{
+  text-align: justify;
+}
 
 .scopeAndLimit .container .content .inscope .card {
   border: 2px solid #196d00;
@@ -432,6 +444,87 @@ text-align: justify;
 
 .scopeAndLimit .container .content .outofscope .card:hover{
   background-color: rgba(255, 0, 0, 0.2);
+}
+
+/* tools and technologies */
+.toolAndTechnology{
+  margin-top: 7rem;
+}
+
+.toolAndTechnology .container {
+  padding-bottom: 4rem;
+}
+
+.toolAndTechnology .container header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.toolAndTechnology .container header h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, #006ec9, #5f27f8, #f71b3f);
+  color: transparent;
+}
+
+.toolAndTechnology .container header{
+  margin-bottom: 2.5rem;
+}
+
+.toolAndTechnology .container main .navbar{
+  padding: 0;
+  border: 2px solid #000000;
+  justify-content: center;
+  border-radius: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.toolAndTechnology .container main .navbar .nav .nav-item a{
+  padding: 0.75rem 2rem;
+  border-radius: 5rem;
+  color: #000000;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+.toolAndTechnology .container main .navbar .nav .nav-item .nav-link.active{
+  color: #ffffff;
+  background-image: linear-gradient(to right, #ffffff4f, #000ba1ad) ;
+}
+
+.toolAndTechnology .container main .tab-content{
+  text-align: justify;
+}
+
+.toolAndTechnology .container main .tab-content h1{
+  font-size: 3rem;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, #006ec9, #5f27f8, #f71b3f);
+  color: transparent;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.toolAndTechnology .container main .tab-content h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.toolAndTechnology .container main .tab-content p{
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.toolAndTechnology .container main .tab-content img{
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0 10rem;
 }
 
 
