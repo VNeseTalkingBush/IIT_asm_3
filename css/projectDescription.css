@@ -216,7 +216,8 @@ html {
   .planAndProgress .container h1,
   .role .container h1,
   .scopeAndLimit .container h1,
-  .toolAndTechnology .container h1{
+  .toolAndTechnology .container h1,
+  .testingAndTimeframe .container h1{
     text-align: center;
     font-weight: 900;
     font-size: 5rem;
@@ -527,6 +528,24 @@ text-align: justify;
   padding: 0 10rem;
 }
 
+/* testing and timeframe */
+.testingAndTimeframe{
+  margin: 5rem 0;
+}
+
+.testingAndTimeframe .container h1{
+  margin-bottom: 3rem;
+}
+
+.testingAndTimeframe .container h3{
+  font-weight: 700;
+}
+
+.testingAndTimeframe .container p{
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 2rem;
+}
 
   /* footer */
 .footer {
