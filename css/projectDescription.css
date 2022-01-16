@@ -3,7 +3,7 @@ body{
 }
 
 .container{
-  max-width: 90%;
+  max-width: 80%;
   margin: auto;
 }
 
@@ -209,6 +209,67 @@ html {
   }
   .dp_menu .sub-menu {
       display:none
+  }
+
+  /* detailed desciption */
+  .detailedDescription{
+    margin: 5rem 0;
+  }
+
+  .detailedDescription .container h1{
+    text-align: center;
+    font-weight: 900;
+    font-size: 5rem;
+    background-image: linear-gradient(to right, rgba(204, 166, 255, 0.952),
+      rgb(105, 35, 170),
+      rgb(47, 2, 73));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .detailedDescription .container .content{
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height: 2rem;
+  }
+
+  .detailedDescription .container .content h3{
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+  }
+
+  .detailedDescription .container .content .card{
+    height: 55rem;
+    border-radius: 3rem;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem;
+  }
+
+  .detailedDescription .container .content .image{
+    text-align: center;
+  }
+
+  .detailedDescription .container .content .image img{
+    height: 20rem;
+    width: 100%;
+    border-radius: 3rem;
+  }
+
+  .detailedDescription .container .content .card-body .card-title{
+    font-weight: 600;
+    color: rgba(111, 0, 255, 0.637);
+    margin: 1rem 0;
+  }
+
+  .detailedDescription .container .content .card{
+    transition: all 0.5s;
+  }
+
+  .detailedDescription .container .content .card:hover{
+    transform: translateY(-0.5rem);
   }
 
 
