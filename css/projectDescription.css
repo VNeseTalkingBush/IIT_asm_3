@@ -217,7 +217,8 @@ html {
   .role .container h1,
   .scopeAndLimit .container h1,
   .toolAndTechnology .container h1,
-  .testingAndTimeframe .container h1{
+  .testingAndTimeframe .container h1,
+  .communication .container h1{
     text-align: center;
     font-weight: 900;
     font-size: 5rem;
@@ -542,6 +543,21 @@ text-align: justify;
 }
 
 .testingAndTimeframe .container p{
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 2rem;
+}
+
+/* communication */
+.communication{
+  margin: 5rem;
+}
+
+.communication h1{
+  margin-bottom: 3rem;
+}
+
+.communication p{
   text-align: justify;
   letter-spacing: 2px;
   line-height: 2rem;
