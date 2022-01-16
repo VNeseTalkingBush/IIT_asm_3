@@ -213,7 +213,8 @@ html {
 
   /* title */
   .detailedDescription .container h1,
-  .planAndProgress .container h1{
+  .planAndProgress .container h1,
+  .role .container h1{
     text-align: center;
     font-weight: 900;
     font-size: 5rem;
@@ -275,6 +276,10 @@ html {
   }
 
 /* plans and progress */
+.planAndProgress{
+  margin-bottom: 7rem;  
+}
+
 .planAndProgress .carousel-inner{
   border-radius: 50%;
   background-image: linear-gradient(to right, rgba(213, 181, 255, 0.952),
@@ -328,6 +333,69 @@ html {
   font-size: 1rem;
   letter-spacing: 2px;
   line-height: 1.5rem;
+  text-align: justify;
+}
+
+/* Role */
+.role {
+  margin: 3rem 0;
+}
+
+.role .container .image{
+  margin: 2rem 0;
+}
+
+.role .container .image .outer-circle {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.role .container .image .outer-circle span {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(#320046, #000000a6, #ff0000);
+  border-radius: 50%;
+  animation: rotate 1.5s linear infinite;
+}
+
+.role .container .image .inner-circle {
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  background-size: cover;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 30;
+}
+
+.role .container .content{
+  text-align: left;
+}
+
+.role .container .content h3{
+  font-weight: 700;
+}
+
+.role .container .content h5{
+  color:#a3a2a2;
+  margin-bottom: 2rem;
+}
+
+.role .container .description h4{
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+.role .container .description p{
+font-size: 1rem;
+letter-spacing: 2px;
+line-height: 1.5rem;
+text-align: justify;
 }
 
   /* footer */
@@ -503,4 +571,13 @@ html {
   .footer main .row h3:hover .fa {
     transform: translateY(-0.3rem);
     color: #ffffff;
+  }
+
+  @keyframes rotate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
   }
