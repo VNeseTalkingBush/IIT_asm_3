@@ -218,6 +218,7 @@ html {
   .scopeAndLimit .container h1,
   .toolAndTechnology .container h1,
   .testingAndTimeframe .container h1,
+  .risk .container h1,
   .communication .container h1{
     text-align: center;
     font-weight: 900;
@@ -546,6 +547,30 @@ text-align: justify;
   text-align: justify;
   letter-spacing: 2px;
   line-height: 2rem;
+}
+
+/* risks */
+.risk{
+  margin: 7rem 0;
+}
+
+.risk h1{
+  margin-bottom: 3rem;
+}
+
+.risk p{
+  text-align: justify;
+  line-height: 2rem;
+  letter-spacing: 2px;
+}
+
+.risk .card{
+  border: 2px solid silver;
+}
+
+.risk .card-header{
+  font-weight: 900;
+  font-size: 1.5rem;
 }
 
 /* communication */
