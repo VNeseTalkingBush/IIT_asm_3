@@ -211,12 +211,9 @@ html {
       display:none
   }
 
-  /* detailed desciption */
-  .detailedDescription{
-    margin: 5rem 0;
-  }
-
-  .detailedDescription .container h1{
+  /* title */
+  .detailedDescription .container h1,
+  .planAndProgress .container h1{
     text-align: center;
     font-weight: 900;
     font-size: 5rem;
@@ -226,6 +223,11 @@ html {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  /* detailed desciption */
+  .detailedDescription{
+    margin: 5rem 0;
   }
 
   .detailedDescription .container .content{
@@ -272,6 +274,61 @@ html {
     transform: translateY(-0.5rem);
   }
 
+/* plans and progress */
+.planAndProgress .carousel-inner{
+  border-radius: 50%;
+  background-image: linear-gradient(to right, rgba(213, 181, 255, 0.952),
+  rgb(96, 0, 185),
+  rgba(108, 0, 170, 0.781));
+}
+
+.planAndProgress .carousel-item{
+    position: relative;
+    height: 70rem;
+}
+
+.planAndProgress .carousel-item::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.planAndProgress .carousel-caption{
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.planAndProgress .carousel-caption img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.planAndProgress .carousel-indicators li{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+}
+
+.planAndProgress .carousel{
+  margin: 3rem 0;
+}
+
+.planAndProgress .container .carousel-inner .carousel-item h5{
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+.planAndProgress .container .carousel-inner .carousel-item p{
+  font-size: 1rem;
+  letter-spacing: 2px;
+  line-height: 1.5rem;
+}
 
   /* footer */
 .footer {
