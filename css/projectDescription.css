@@ -214,7 +214,8 @@ html {
   /* title */
   .detailedDescription .container h1,
   .planAndProgress .container h1,
-  .role .container h1{
+  .role .container h1,
+  .scopeAndLimit .container h1{
     text-align: center;
     font-weight: 900;
     font-size: 5rem;
@@ -397,6 +398,42 @@ letter-spacing: 2px;
 line-height: 1.5rem;
 text-align: justify;
 }
+
+/* scope */
+.scopeAndLimit{
+  margin: 7rem 0;
+}
+
+.scopeAndLimit .container h1{
+  margin-bottom: 3rem;
+}
+
+.scopeAndLimit .container .content .inscope .card {
+  border: 2px solid #196d00;
+  transition: all 0.5s;
+}
+
+.scopeAndLimit .container .content .inscope .card:hover{
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.scopeAndLimit{
+  margin: 7rem 0;
+}
+
+.scopeAndLimit .container h1{
+  margin-bottom: 3rem;
+}
+
+.scopeAndLimit .container .content .outofscope .card {
+  border: 2px solid #6d0000;
+  transition: all 0.5s;
+}
+
+.scopeAndLimit .container .content .outofscope .card:hover{
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
 
   /* footer */
 .footer {
