@@ -35,31 +35,49 @@ function scrollFunction() {
     $('.title-personalInformation').addClass('fadeIn animated')
   }
 
-  if (document.body.scrollTop > 3500 || document.documentElement.scrollTop > 3500){
+  if (document.body.scrollTop > 3200 || document.documentElement.scrollTop > 3200){
+    $('.title-groupProcesses').addClass('fadeIn animated')
+  }
+
+  if (document.body.scrollTop > 3300 || document.documentElement.scrollTop > 3300){
+    $('.process-img').addClass(('fadeInLeft animated'))
+    $('.process-details').addClass(('fadeInRight animated'))
+  }
+
+  if (document.body.scrollTop > 4000 || document.documentElement.scrollTop > 4000){
+    $('.title-careerPlans').addClass('fadeIn animated')
+    $('.card-career').addClass('bounceIn animated')
+  }
+
+  if (document.body.scrollTop > 5100 || document.documentElement.scrollTop > 5100){
     $('.title-projectDescription').addClass('fadeIn animated')
   }
 
-  if (document.body.scrollTop > 3700 || document.documentElement.scrollTop > 3700){
+  if (document.body.scrollTop > 5300 || document.documentElement.scrollTop > 5300){
     $('.topic').addClass('fadeInLeft animated')
     $('.topic-text').addClass('fadeInLeft animated')
   }
 
-  if (document.body.scrollTop > 4500 || document.documentElement.scrollTop > 4500){
+  if (document.body.scrollTop > 6100 || document.documentElement.scrollTop > 6100){
     $('.motivation').addClass('fadeInRight animated')
     $('.motivation-text').addClass('fadeInRight animated')
   }
 
-  if (document.body.scrollTop > 4800 || document.documentElement.scrollTop > 4800){
+  if (document.body.scrollTop > 6700 || document.documentElement.scrollTop > 6700){
     $('.landscape').addClass('fadeInUp animated')
     $('.landscape-text').addClass('fadeInUp animated')
   }
 
-  if (document.body.scrollTop > 7000 || document.documentElement.scrollTop > 7000){
+  if (document.body.scrollTop > 8500 || document.documentElement.scrollTop > 8500){
     $('.title-skillAndJobs').addClass('fadeIn animated')
   }
 
-  if (document.body.scrollTop > 7200 || document.documentElement.scrollTop > 7200){
+  if (document.body.scrollTop > 8700 || document.documentElement.scrollTop > 8700){
     $('.main-content').addClass('fadeIn animated')
+  }
+
+  if (document.body.scrollTop > 10500|| document.documentElement.scrollTop > 10500){
+    $('.groupReflection .container').addClass('fadeIn animated')
   }
   
 }

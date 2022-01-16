@@ -270,7 +270,9 @@ html {
   text-align: center;
 }
 .teamProfile .teamName .title-teamName, 
-.teamProfile .personalInformation .title-personalInformation {
+.teamProfile .personalInformation .title-personalInformation,
+.teamProfile .groupProcesses .title-groupProcesses,
+.teamProfile .careerPlans .title-careerPlans {
   font-size: 7rem;
   font-weight: 900;
   background-image: linear-gradient(to right, rgb(102, 59, 39), rgb(255, 209, 188), rgb(202, 64, 0));
@@ -377,6 +379,117 @@ html {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
+}
+
+/* group processes */
+.groupProcesses img{
+  width: 100%;
+}
+
+.groupProcesses .process-details{
+  text-align: justify;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 2rem;
+  letter-spacing: 2px;
+  opacity: 0;
+}
+
+.groupProcesses .img{
+  animation-name: movement;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+/* career plans */
+.careerPlans .row .col-6 .card-career{
+  opacity: 0;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.careerPlans .row .col-6 .card-career .box{
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 7rem;
+  background: #111845a6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #2a3cad;
+  color: white;
+  padding: 20px;
+}
+
+.careerPlans .row .col-6 .card-career .box .content{
+  border:1px solid #f0a591;
+  padding:20px;
+  text-align:center;
+  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
+  height: 5rem;
+}
+
+.careerPlans .row .col-6 .card-career .box span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  
+}
+
+.careerPlans .row .col-6 .card-career .box span:nth-child(1)
+{
+  transform:rotate(0deg);
+}
+
+.box span:nth-child(2)
+{
+  transform:rotate(90deg);
+}
+
+.box span:nth-child(3)
+{
+  transform:rotate(180deg);
+}
+
+.box span:nth-child(4)
+{
+  transform:rotate(270deg);
+}
+
+.careerPlans .row .col-6 .card-career .box span:before
+{
+  content: '';
+  position: absolute;
+  width:100%;
+  height: 2px;
+  background: #50dfdb;
+  animation: border 4s linear infinite;
+}
+
+.careerPlans .row .col-6 .card-career{
+  height: 15rem;
+}
+
+.careerPlans .row .col-6 .card-career .card-text{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.careerPlans .row .col-6 .card-career .card-title{
+  font-size: 1.3rem;
+  font-weight: 800;
 }
 
 /* Project description */
@@ -664,6 +777,7 @@ html {
   background-size: cover;
   padding: 5rem;
   text-align: center;
+  height: 55rem;
 }
 
 .groupReflection header{
@@ -918,5 +1032,30 @@ html {
 @keyframes typing {
   from {
     width: 0
+  }
+}
+
+@keyframes border {
+  0% {
+  transform:scaleX(0);
+  transform-origin: left;
+  }
+  50%
+  {
+    transform:scaleX(1);
+  transform-origin: left;
+  }
+  50.1%
+  {
+    transform:scaleX(1);
+  transform-origin: right;
+    
+  }
+  
+  100%
+  {
+    transform:scaleX(0);
+  transform-origin: right;
+    
   }
 }
